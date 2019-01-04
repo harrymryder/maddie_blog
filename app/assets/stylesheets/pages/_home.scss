@@ -10,7 +10,7 @@
 .banner-content {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   text-align: center;
   max-width: 650px;
   margin: 0 auto;
@@ -19,6 +19,10 @@
 
 .banner-content-small {
   padding-top: 60px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 340px;
 }
 
 .banner-small-header-tabs {
@@ -26,6 +30,7 @@
 }
 
 .large-logo {
+  text-align: center;
   &:hover {
     text-decoration: none;
   }
@@ -54,7 +59,7 @@
 
 .header-tabs {
   text-decoration: none;
-  color: $headers-color;
+  color: #696969;
   &:hover {
     text-decoration: none;
     color: $headers-color;
