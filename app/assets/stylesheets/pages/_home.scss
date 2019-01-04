@@ -1,27 +1,55 @@
-.header {
+.banner {
+  color: white;
+  text-align: center;
+  height: 100vh;
+  background-position: center;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+}
+
+.banner-content {
   display: flex;
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  width: 650px;
-  margin: 80px auto;
+  max-width: 650px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+
+.banner-content-small {
+  padding-top: 60px;
+}
+
+.banner-small-header-tabs {
+  padding-top: 20px;
 }
 
 .large-logo {
-  color: $headers-color;
-  h2 {
-    font-size: 60px;
-  }
-  h3 {
-    font-size: 52px;
+  &:hover {
+    text-decoration: none;
   }
 }
 
 .large-logo-top {
   margin: 0;
+  font-family: $headers-font;
+  color: $headers-color;
+  font-size: 52px;
+  &:hover {
+    text-decoration: none !important;
+    color: $headers-color;
+  }
 }
 .large-logo-bottom {
   margin: 0;
+  color: $headers-color;
+  font-family: $headers-font;
+  font-size: 60px;
+  &:hover {
+    text-decoration: none !important;
+    color: $headers-color;
+  }
 }
 
 .header-tabs {

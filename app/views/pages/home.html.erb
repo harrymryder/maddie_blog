@@ -1,19 +1,6 @@
+<div class="banner" style="background-image: url('https://images.pexels.com/photos/910213/pexels-photo-910213.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');">
+  <%#= image_tag "banner.jpeg" %>
 
-<div class="banner">
-  <%= image_tag "banner.jpeg"%>
-
-  <div class="header">
-
-    <h6><%= link_to 'About', about_path, class: "header-tabs"%></h6>
-    <h6><%= link_to 'Articles', articles_path, class: 'header-tabs'%></h6>
-
-    <div class='large-logo'>
-      <h3 class='large-logo-top'>IF I HAD A</h3>
-      <h2 class='large-logo-bottom'>COLUMN</h2>
-    </div>
-    <h6><%= link_to 'Books', books_path, class: 'header-tabs'%></h6>
-    <h6><%= link_to 'Film', film_path, class: 'header-tabs' %></h6>
-
-  </div>
+  <%= render 'shared/header' %>
 
 </div>
