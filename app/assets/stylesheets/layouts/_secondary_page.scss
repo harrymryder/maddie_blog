@@ -1,0 +1,27 @@
+.secondary-page-container {
+  max-width: 650px;
+  margin: 40px auto;
+}
+.secondary-page-header {
+  margin-top: 80px;
+  color: $headers-color;
+}
+.secondary-page-container-small {
+  padding-left: 40px;
+}
+
+// Form
+
+.secondary-page-form {
+  max-width: 650px;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+.secondary-page-form-header {
+  padding-bottom: 8px;
+}
+.secondary-page-form-button {
+  border: 1px solid $headers-color;
+  border-radius: 3px;
+  font-size: 12px;
+}

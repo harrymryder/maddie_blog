@@ -6,14 +6,4 @@ class PagesController < ApplicationController
 
   def about
   end
-
-  def articles
-    @post = Post.new
-  end
-
-  def books
-  end
-
-  def film
-  end
 end

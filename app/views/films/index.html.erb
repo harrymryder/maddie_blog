@@ -1,0 +1,30 @@
+<%= render 'shared/header' %>
+
+<% if user_signed_in? %>
+  <%= simple_form_for(@film) do |f| %>
+    <%= f.input :title,
+                required: true,
+                label: false,
+                placeholder: "title",
+                autofocus: true %>
+    <%= f.input :description,
+                required: true,
+                label: false,
+                placeholder: "author",
+                autofocus: true %>
+    <%= f.button :submit, 'Add Film' %>
+  <% end -%>
+<% end %>
+
+<div class="secondary-page-container hidden-xs">
+  <div class="secondary-page-header">
+    <h3>Film</h3>
+  </div>
+</div>
+
+<div class="secondary-page-container-small hidden-sm hidden-md hidden-lg">
+  <div class="secondary-page-header">
+    <h3>Film</h3>
+  </div>
+</div>
+
