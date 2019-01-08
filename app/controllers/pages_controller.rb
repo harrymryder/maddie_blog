@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   end
 
   def articles
+    @post = Post.new
   end
 
   def books

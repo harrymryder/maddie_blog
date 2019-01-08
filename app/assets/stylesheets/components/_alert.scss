@@ -5,11 +5,12 @@
 .alert {
   margin: 0;
   text-align: center;
-  color: white;
+  color: #C0C0C0;
+  font-family: $body-font;
 }
 .alert-info {
   background: $headers-color;
 }
 .alert-warning {
-  background: $red;
+  background: $headers-color;
 }
