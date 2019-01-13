@@ -1,0 +1,32 @@
+.book {
+  border-bottom: 1px solid #DCDCDC;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.book-content {
+  display: flex;
+}
+
+.book-title {
+  padding-bottom: 16px;
+  font-size: 24px;
+}
+
+.book-right {
+  margin-left: 40px;
+}
+
+.book-author {
+  font-family: $headers-font;
+  font-size: 16px;
+}
+
+.book-description {
+  margin-top: 16px;
+}
+
+.book-photo {
+  border-radius: 1px;
+  box-shadow: 0 0.5px 10px rgba(62, 9, 11, 0.2);
+}

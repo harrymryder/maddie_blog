@@ -1,34 +1,31 @@
 <%= render 'shared/header' %>
 
-<% if user_signed_in? %>
-  <%= simple_form_for(@book) do |f| %>
-    <%= f.input :title,
-                required: true,
-                label: false,
-                placeholder: "title",
-                autofocus: true %>
-    <%= f.input :author,
-                required: true,
-                label: false,
-                placeholder: "author",
-                autofocus: true %>
-    <%= f.input :description,
-                required: true,
-                label: false,
-                placeholder: "description",
-                autofocus: true %>
-    <%= f.button :submit, 'Add Book' %>
-  <% end -%>
-<% end %>
+<div class="secondary-page-container">
 
-<div class="secondary-page-container hidden-xs">
-  <div class="secondary-page-header">
-    <h3>Books</h3>
+  <% if user_signed_in? %>
+    <h5 class="text-center"><%= link_to 'New Book', new_book_path, class: 'new-post-link' %></h5>
+  <% end %>
+
+  <h3 class="secondary-page-header text-center">Recommended Books</h3>
+
+  <% @books.each do |book| %>
+  <div class="book">
+    <h4 class="book-title"><%= book.title %></h4>
+    <% if user_signed_in? %>
+      <%= link_to 'Edit Book', edit_book_path(book) %>
+    <% end %>
+    <div class="book-content">
+      <div class="book-photo">
+        <%= cl_image_tag(book.photo, height: 320, width: 220, crop: :fill, class: 'book-photo') %>
+      </div>
+      <div class="book-right">
+        <p class="book-author"><%= book.author %></p>
+        <p class="book-description"><%= book.description %></p>
+      </div>
+    </div>
   </div>
+  <% end %>
+
+
 </div>
 
-<div class="secondary-page-container-small hidden-sm hidden-md hidden-lg">
-  <div class="secondary-page-header">
-    <h3>Books</h3>
-  </div>
-</div>

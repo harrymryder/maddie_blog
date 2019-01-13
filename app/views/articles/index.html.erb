@@ -1,53 +1,21 @@
 <%= render 'shared/header' %>
 
-<% if user_signed_in? %>
+<div class="secondary-page-container">
 
-  <div class="secondary-page-form">
+  <% if user_signed_in? %>
+    <h5 class="text-center"><%= link_to 'New Article', new_article_path, class: 'new-post-link' %></h5>
+  <% end %>
 
-    <h5 class="secondary-page-form-header">New Article</h5>
-
-    <%= simple_form_for @article do |f| %>
-      <%= f.input :title,
-                  required: true,
-                  label: false,
-                  placeholder: "title",
-                  autofocus: true %>
-      <%= f.input :content,
-                  required: true,
-                  label: false,
-                  placeholder: "content",
-                  autofocus: true %>
-      <%#= f.input :photo %>
-      <%#= f.input :photo_cache, as: :hidden %>
-      <%= f.button :submit,
-                   'Add Article',
-                   class: 'secondary-page-form-button' %>
-    <% end %>
-
+  <h3 class="secondary-page-header text-center">Featured Articles</h3>
+  <% @articles.each do |article| %>
+  <div class="article-index">
+    <p class="article-index-date">
+      <%= article.author %>
+      /
+      <%= article.created_at.strftime("%b %d, %Y") %>
+    </p>
+    <h4 class="article-index-title"><%= link_to article.title, article_path(article) %></h4>
   </div>
+  <% end %>
 
-<% end %>
-
-<div class="secondary-page-container hidden-xs">
-  <div class="secondary-page-header">
-    <h3>Articles</h3>
-  </div>
-
-  <div class="article-content">
-    <% @articles.each do |article| %>
-
-    <%#= cl_image_tag @article.photo, height: 300, width: 400, crop: :fill %>
-
-    <h4><%= article.title %></h4>
-    <p><%= article.created_at.strftime("%B %d, %Y at %I:%M %p") %></p>
-    <p><%= article.content %></p>
-
-    <% end %>
-  </div>
-</div>
-
-<div class="secondary-page-container-small hidden-sm hidden-md hidden-lg">
-  <div class="secondary-page-header">
-    <h3>Articles</h3>
-  </div>
 </div>

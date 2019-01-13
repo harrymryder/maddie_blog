@@ -1,0 +1,28 @@
+<%= render 'shared/header' %>
+
+<div class="article-show-container">
+  <p class="article-show-date text-center">
+    <%= @article.author %>
+    /
+    <%= @article.created_at.strftime("%b %d, %Y") %>
+  </p>
+  <h4 class="article-show-title text-center"><%= @article.title %></h4>
+
+  <% if user_signed_in? %>
+    <div class="article-actions">
+      <%= link_to 'Edit', edit_article_path(@article), class: 'edit-link' %>
+      <%= link_to 'Delete', @article, method: :delete, class: 'delete-link' %>
+    </div>
+  <% end %>
+
+  <%= cl_image_tag @article.photo,
+                    height: 350,
+                    width: 600,
+                    crop: :crop,
+                    class: 'article-show-photo'%>
+</div>
+
+<div class="article-show-content-container">
+  <p class="article-show-content text-justify"><%= simple_format(@article.content) %></p>
+</div>
+

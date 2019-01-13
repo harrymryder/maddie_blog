@@ -1,13 +1,12 @@
 .secondary-page-container {
   max-width: 650px;
   margin: 40px auto;
+  min-width: 350px;
 }
 .secondary-page-header {
-  margin-top: 80px;
   color: $headers-color;
-}
-.secondary-page-container-small {
-  padding-left: 40px;
+  border-bottom: 1px solid #DCDCDC;
+  padding-bottom: 48px;
 }
 
 // Form
@@ -16,12 +15,27 @@
   max-width: 650px;
   margin: 0 auto;
   padding-top: 80px;
+  .form-control-file {
+    font-family: $body-font;
+    font-size: 12px;
+  }
 }
-.secondary-page-form-header {
-  padding-bottom: 8px;
+
+.new-post-link {
+  margin-bottom: 24px;
+  color: $orange;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  &:hover {
+    color: $medium-gray !important;
+    text-decoration: none !important;
+  }
 }
+
 .secondary-page-form-button {
   border: 1px solid $headers-color;
   border-radius: 3px;
   font-size: 12px;
 }
+
+
