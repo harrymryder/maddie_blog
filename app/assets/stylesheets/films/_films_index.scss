@@ -2,6 +2,7 @@
   border-bottom: 1px solid #DCDCDC;
   padding-top: 40px;
   padding-bottom: 40px;
+  line-height: 24px;
 }
 
 .film-content {
@@ -62,6 +63,7 @@
 .film-small {
   border-bottom: 1px solid #DCDCDC;
   min-width: 350px;
+  max-width: 350px;
   padding-top: 40px;
   padding-bottom: 40px;
   display: flex;
