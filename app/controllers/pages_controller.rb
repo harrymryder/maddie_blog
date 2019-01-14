@@ -6,4 +6,7 @@ class PagesController < ApplicationController
 
   def about
   end
+
+  # def edit_about
+  # end
 end

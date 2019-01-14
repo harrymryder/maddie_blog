@@ -1,30 +1,57 @@
 <%= render 'shared/header' %>
 
-<% if user_signed_in? %>
-  <%= simple_form_for(@film) do |f| %>
-    <%= f.input :title,
-                required: true,
-                label: false,
-                placeholder: "title",
-                autofocus: true %>
-    <%= f.input :description,
-                required: true,
-                label: false,
-                placeholder: "author",
-                autofocus: true %>
-    <%= f.button :submit, 'Add Film' %>
-  <% end -%>
-<% end %>
+<div class="secondary-page-container-large hidden-xs">
+  <% if user_signed_in? %>
+    <h5 class="text-center"><%= link_to 'Add Film', new_film_path, class: 'new-post-link' %></h5>
+  <% end %>
 
-<div class="secondary-page-container hidden-xs">
-  <div class="secondary-page-header">
-    <h3>Film</h3>
+  <h3 class="secondary-page-header text-center">Films and Documentaries</h3>
+
+  <% @films.each do |film| %>
+  <div class="film">
+    <div class="film-top">
+      <h4 class="film-title"><%= film.title %></h4>
+      <% if user_signed_in? %>
+      <div class="film-actions">
+        <%= link_to 'Edit', edit_film_path(film), class: 'film-action' %>
+        <%= link_to 'Delete', film, method: :delete, data: { confirm: "Are you sure?" }, class: 'film-action' %>
+      </div>
+      <% end %>
+    </div>
+    <div class="film-content">
+      <%= cl_image_tag(film.photo, height: 320, width: 220, crop: :fill, class: 'film-photo') %>
+      <div class="film-right">
+        <p class="film-date">Released <%= film.date.strftime("%b %Y") %></p>
+        <p class="film-description"><%= simple_format(film.description) %></p>
+      </div>
+    </div>
   </div>
+  <% end %>
 </div>
 
-<div class="secondary-page-container-small hidden-sm hidden-md hidden-lg">
-  <div class="secondary-page-header">
-    <h3>Film</h3>
+<div class="secondary-page-container-small hidden-lg hidden-md hidden-sm">
+  <% if user_signed_in? %>
+    <h5 class="text-center"><%= link_to 'Add Film', new_film_path, class: 'new-post-link' %></h5>
+  <% end %>
+
+  <h3 class="secondary-page-header-small text-center">Films and Documentaries</h3>
+
+  <% @films.each do |film| %>
+  <div class="film-small">
+    <div class="film-top-small">
+      <h4 class="film-title-small text-center"><%= film.title %></h4>
+      <p class="film-date text-center">Released <%= film.date.strftime("%b %Y") %></p>
+      <% if user_signed_in? %>
+      <div class="film-actions-small">
+        <%= link_to 'Edit', edit_film_path(film), class: 'film-action-small' %>
+        <%= link_to 'Delete', film, method: :delete, data: { confirm: "Are you sure?" }, class: 'film-action-small' %>
+      </div>
+      <% end %>
+    </div>
+    <%= cl_image_tag(film.photo, height: 320, width: 220, crop: :fill, class: 'film-photo-small') %>
+    <p class="film-description-small"><%= simple_format(film.description, class: 'text-justify') %></p>
   </div>
+  <% end %>
 </div>
 
+<%= render 'shared/footer' %>

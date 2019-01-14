@@ -1,6 +1,6 @@
 <%= render 'shared/header' %>
 
-<div class="secondary-page-container">
+<div class="secondary-page-container-large">
 
   <% if user_signed_in? %>
     <h5 class="text-center"><%= link_to 'New Article', new_article_path, class: 'new-post-link' %></h5>
@@ -17,3 +17,5 @@
   <% end %>
 
 </div>
+
+<%= render 'shared/footer' %>

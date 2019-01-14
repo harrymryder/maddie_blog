@@ -1,4 +1,4 @@
-.secondary-page-container {
+.secondary-page-container-large {
   max-width: 650px;
   margin: 40px auto;
   min-width: 350px;
@@ -7,6 +7,19 @@
   color: $headers-color;
   border-bottom: 1px solid #DCDCDC;
   padding-bottom: 48px;
+}
+
+// Media Responsive - Only shown on XS screen
+.secondary-page-container-small {
+  width: 350px;
+  margin: 40px auto;
+  width: 350px;
+}
+.secondary-page-header-small {
+  color: $headers-color;
+  border-bottom: 1px solid #DCDCDC;
+  padding-bottom: 48px;
+  width: 350px;
 }
 
 // Form
