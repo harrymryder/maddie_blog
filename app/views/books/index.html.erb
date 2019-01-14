@@ -1,7 +1,6 @@
 <%= render 'shared/header' %>
 
-<div class="secondary-page-container-large">
-
+<div class="secondary-page-container-large hidden-xs">
   <% if user_signed_in? %>
     <h5 class="text-center"><%= link_to 'New Book', new_book_path, class: 'new-post-link' %></h5>
   <% end %>
@@ -23,12 +22,36 @@
       <%= cl_image_tag(book.photo, height: 320, width: 220, crop: :fill, class: 'book-photo') %>
       <div class="book-right">
         <p class="book-author">By <%= book.author %></p>
-        <p class="book-description"><%= simple_format(book.description) %></p>
+        <p class="book-description"><%= simple_format(book.description, class: 'text-justify') %></p>
       </div>
     </div>
   </div>
   <% end %>
+</div>
 
+<div class="secondary-page-container-small hidden-sm hidden-md hidden-lg">
+  <% if user_signed_in? %>
+    <h5 class="text-center"><%= link_to 'New Book', new_book_path, class: 'new-post-link' %></h5>
+  <% end %>
+
+  <h3 class="secondary-page-header-small text-center">Recommended Books</h3>
+
+  <% @books.each do |book| %>
+  <div class="film-small">
+    <div class="film-top-small">
+      <h4 class="film-title-small text-center"><%= book.title %></h4>
+      <p class="film-date-small text-center">By <%= book.author %></p>
+      <% if user_signed_in? %>
+      <div class="film-actions-small">
+        <%= link_to 'Edit', edit_book_path(book), class: 'film-action-small' %>
+        <%= link_to 'Delete', book, method: :delete, data: { confirm: "Are you sure?" }, class: 'film-action-small' %>
+      </div>
+      <% end %>
+    </div>
+    <%= cl_image_tag(book.photo, height: 320, width: 220, crop: :fill, class: 'film-photo-small') %>
+    <p class="film-description-small"><%= simple_format(book.description, class: 'text-justify') %></p>
+  </div>
+  <% end %>
 </div>
 
 <%= render 'shared/footer' %>

@@ -22,7 +22,7 @@
       <%= cl_image_tag(film.photo, height: 320, width: 220, crop: :fill, class: 'film-photo') %>
       <div class="film-right">
         <p class="film-date">Released <%= film.date.strftime("%b %Y") %></p>
-        <p class="film-description"><%= simple_format(film.description) %></p>
+        <p class="film-description"><%= simple_format(film.description, class: 'text-justify') %></p>
       </div>
     </div>
   </div>

@@ -21,7 +21,7 @@
 </div>
 
 <div class="article-show-content-container">
-  <p class="article-show-content text-justify"><%= simple_format(@article.content) %></p>
+  <p class="article-show-content text-justify"><%= simple_format(@article.content, class: 'text-justify') %></p>
 </div>
 
 <%= render 'shared/footer' %>
