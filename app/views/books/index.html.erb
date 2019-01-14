@@ -10,17 +10,20 @@
 
   <% @books.each do |book| %>
   <div class="book">
-    <h4 class="book-title"><%= book.title %></h4>
-    <% if user_signed_in? %>
-      <%= link_to 'Edit Book', edit_book_path(book) %>
-    <% end %>
-    <div class="book-content">
-      <div class="book-photo">
-        <%= cl_image_tag(book.photo, height: 320, width: 220, crop: :fill, class: 'book-photo') %>
+    <div class="book-top">
+      <h4 class="book-title"><%= book.title %></h4>
+      <% if user_signed_in? %>
+      <div class="book-actions">
+        <%= link_to 'Edit', edit_book_path(book), class: 'book-action' %>
+        <%= link_to 'Delete', book, method: :delete, data: { confirm: "Are you sure?" }, class: 'book-action' %>
       </div>
+      <% end %>
+    </div>
+    <div class="book-content">
+      <%= cl_image_tag(book.photo, height: 320, width: 220, crop: :fill, class: 'book-photo') %>
       <div class="book-right">
-        <p class="book-author"><%= book.author %></p>
-        <p class="book-description"><%= book.description %></p>
+        <p class="book-author">By <%= book.author %></p>
+        <p class="book-description"><%= simple_format(book.description) %></p>
       </div>
     </div>
   </div>

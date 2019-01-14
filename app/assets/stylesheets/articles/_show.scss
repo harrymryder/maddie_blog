@@ -39,6 +39,8 @@
 .edit-link {
   margin: 32px;
   width: 24px;
+  font-size: 12px;
+  color: $secondary-color;
   &:hover {
     color: $orange;
     text-decoration: none !important;
@@ -47,6 +49,8 @@
 .delete-link {
   margin: 16px;
   width: 24px;
+  font-size: 12px;
+  color: $secondary-color;
   &:hover {
     color: $orange;
     text-decoration: none !important;
