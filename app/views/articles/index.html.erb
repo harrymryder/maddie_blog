@@ -1,11 +1,9 @@
 <%= render 'shared/header' %>
 
-<div class="secondary-page-container-large">
-
+<div class="secondary-page-container-large hidden-xs">
   <% if user_signed_in? %>
     <h5 class="text-center"><%= link_to 'New Article', new_article_path, class: 'new-post-link' %></h5>
   <% end %>
-
   <h3 class="secondary-page-header text-center">Featured Articles</h3>
   <% @articles.each do |article| %>
   <div class="article-index">
@@ -15,7 +13,21 @@
     <h4 class="article-index-title"><%= link_to article.title, article_path(article) %></h4>
   </div>
   <% end %>
+</div>
 
+<div class="secondary-page-container-small hidden-sm hidden-md hidden-lg">
+  <% if user_signed_in? %>
+    <h5 class="text-center"><%= link_to 'New Article', new_article_path, class: 'new-post-link' %></h5>
+  <% end %>
+  <h3 class="secondary-page-header-small text-center">Featured Articles</h3>
+  <% @articles.each do |article| %>
+  <div class="article-index">
+    <p class="article-index-date">
+      <%= article.author %> / <%= article.created_at.strftime("%b %d, %Y") %>
+    </p>
+    <h4 class="article-index-title"><%= link_to article.title, article_path(article) %></h4>
+  </div>
+  <% end %>
 </div>
 
 <%= render 'shared/footer' %>
