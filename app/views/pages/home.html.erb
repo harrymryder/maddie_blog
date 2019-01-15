@@ -1,5 +1,10 @@
 <div class="banner" style="background-image: url('https://images.pexels.com/photos/910213/pexels-photo-910213.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');">
   <%#= image_tag "banner.jpeg" %>
+  <% if user_signed_in? %>
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <i class="fas fa-sign-out-alt navbar-icon text-center"></i>
+    <% end %>
+  <% end %>
 
   <%= render 'shared/header' %>
 

@@ -1,9 +1,3 @@
-<% if user_signed_in? %>
-  <%= link_to destroy_user_session_path, method: :delete do %>
-    <i class="fas fa-sign-out-alt navbar-icon"></i>
-  <% end %>
-<% end %>
-
 <div class="banner-content hidden-xs">
   <h6><%= link_to 'About', about_path, class: "header-tabs"%></h6>
   <h6><%= link_to 'Articles', articles_path, class: 'header-tabs'%></h6>
@@ -14,7 +8,7 @@
   <% end %>
 
   <h6><%= link_to 'Books', books_path, class: 'header-tabs'%></h6>
-  <h6><%= link_to 'Film', film_path, class: 'header-tabs' %></h6>
+  <h6><%= link_to 'Film', films_path, class: 'header-tabs' %></h6>
 </div>
 
 <div class="banner-content-small hidden-sm hidden-md hidden-lg">
@@ -26,6 +20,6 @@
     <h6><%= link_to 'About', about_path, class: "header-tabs"%></h6>
     <h6><%= link_to 'Articles', articles_path, class: 'header-tabs'%></h6>
     <h6><%= link_to 'Books', books_path, class: 'header-tabs'%></h6>
-    <h6><%= link_to 'Film', film_path, class: 'header-tabs' %></h6>
+    <h6><%= link_to 'Film', films_path, class: 'header-tabs' %></h6>
   </div>
 </div>

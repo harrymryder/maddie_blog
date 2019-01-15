@@ -1,5 +1,9 @@
 .navbar-icon {
   color: $headers-color;
+  transition: color 0.3s ease;
+  &:hover {
+    color: $orange;
+  }
 }
 
 .banner {
@@ -18,7 +22,8 @@
   text-align: center;
   max-width: 650px;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 .banner-content-small {
@@ -31,6 +36,7 @@
 
 .banner-small-header-tabs {
   padding-top: 20px;
+  text-align: center;
 }
 
 .large-logo {
@@ -63,9 +69,10 @@
 
 .header-tabs {
   text-decoration: none;
-  color: #696969;
+  color: $secondary-color;
+  transition: color 0.3s ease;
   &:hover {
     text-decoration: none;
-    color: $headers-color;
+    color: $orange;
   }
 }

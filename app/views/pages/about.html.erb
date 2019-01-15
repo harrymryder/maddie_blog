@@ -1,17 +1,20 @@
 <%= render 'shared/header' %>
 
-<div class="secondary-page-container hidden-xs">
-  <div class="secondary-page-header">
-    <h3>About</h3>
-  </div>
+<div class="secondary-page-container-large">
+
+  <% if user_signed_in? %>
+    <h5 class="text-center"><%#= link_to 'Edit', edit_about_path, class: 'new-post-link' %></h5>
+  <% end %>
+
+  <h3 class="secondary-page-header text-center">About</h3>
+
+  <%= image_tag "maddie 2", width: 650, class: 'about-top-photo' %>
 
   <div class="about-content">
     <p>I'm Maddie and I'm a cheese addict</p>
   </div>
+
+  <%= image_tag "maddie-gorepani", width: 650, class: 'about-bottom-photo' %>
 </div>
 
-<div class="secondary-page-container-small hidden-sm hidden-md hidden-lg">
-  <div class="secondary-page-header">
-    <h3>About</h3>
-  </div>
-</div>
+<%= render 'shared/footer' %>

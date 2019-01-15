@@ -1,0 +1,54 @@
+.secondary-page-container-large {
+  max-width: 650px;
+  margin: 40px auto;
+  min-width: 350px;
+}
+.secondary-page-header {
+  color: $headers-color;
+  border-bottom: 1px solid #DCDCDC;
+  padding-bottom: 48px;
+}
+
+// Media Responsive - Only shown on XS screen
+.secondary-page-container-small {
+  min-width: 350px;
+  margin: 40px auto;
+  max-width: 350px;
+}
+.secondary-page-header-small {
+  color: $headers-color;
+  border-bottom: 1px solid #DCDCDC;
+  padding-bottom: 48px;
+  width: 350px;
+}
+
+// Form
+
+.secondary-page-form {
+  max-width: 650px;
+  margin: 0 auto;
+  padding-top: 80px;
+  .form-control-file {
+    font-family: $body-font;
+    font-size: 12px;
+  }
+}
+
+.new-post-link {
+  margin-bottom: 24px;
+  color: $orange;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  &:hover {
+    color: $medium-gray !important;
+    text-decoration: none !important;
+  }
+}
+
+.secondary-page-form-button {
+  border: 1px solid $headers-color;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+

@@ -1,0 +1,28 @@
+.article {
+  margin-top: 48px;
+}
+.article-index {
+  border-bottom: 1px solid #DCDCDC;
+  padding: 48px;
+  text-align: center;
+}
+.article-index-date {
+  font-style: italic;
+  font-size: 12px;
+}
+.article-index-title {
+  a {
+    font-family: $headers-font;
+    color: $secondary-color !important;
+    font-size: 40px;
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+    &:hover {
+      text-decoration: none !important;
+      // color: #AFBBF2 !important;
+      // color: #C492B1 !important;
+      color: #DB665E !important;
+    }
+  }
+}
+
