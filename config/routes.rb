@@ -9,10 +9,7 @@ Rails.application.routes.draw do
 
   get 'about', to: 'pages#about', as: :about
 
-  # get 'edit_about', to: 'pages#edit_about', as: :about
-
   resources :articles
   resources :books, except: [:show]
   resources :films, except: [:show]
-
 end
