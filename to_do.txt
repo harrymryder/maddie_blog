@@ -1,7 +1,5 @@
-JS for pop up stuff
-
 Text editor
 
-XS small - media responsive
-
 About page
+
+Edit 505 error pages

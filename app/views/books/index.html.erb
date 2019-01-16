@@ -8,21 +8,25 @@
   <h3 class="secondary-page-header text-center">Recommended Books</h3>
 
   <% @books.each do |book| %>
-  <div class="book">
-    <div class="book-top">
-      <h4 class="book-title"><%= book.title %></h4>
-      <% if user_signed_in? %>
-      <div class="book-actions">
-        <%= link_to 'Edit', edit_book_path(book), class: 'book-action' %>
-        <%= link_to 'Delete', book, method: :delete, data: { confirm: "Are you sure?" }, class: 'book-action' %>
+  <div data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom"
+     data-aos-duration="1000">
+    <div class="book">
+      <div class="book-top">
+        <h4 class="book-title"><%= book.title %></h4>
+        <% if user_signed_in? %>
+        <div class="book-actions">
+          <%= link_to 'Edit', edit_book_path(book), class: 'book-action' %>
+          <%= link_to 'Delete', book, method: :delete, data: { confirm: "Are you sure?" }, class: 'book-action' %>
+        </div>
+        <% end %>
       </div>
-      <% end %>
-    </div>
-    <div class="book-content">
-      <%= cl_image_tag(book.photo, height: 320, width: 220, crop: :fill, class: 'book-photo') %>
-      <div class="book-right">
-        <p class="book-author">By <%= book.author %></p>
-        <p class="book-description"><%= simple_format(book.description, class: 'text-justify') %></p>
+      <div class="book-content">
+        <%= cl_image_tag(book.photo, height: 320, width: 220, crop: :fill, class: 'book-photo') %>
+        <div class="book-right">
+          <p class="book-author">By <%= book.author %></p>
+          <p class="book-description"><%= simple_format(book.description, class: 'text-justify') %></p>
+        </div>
       </div>
     </div>
   </div>
@@ -37,19 +41,23 @@
   <h3 class="secondary-page-header-small text-center">Recommended Books</h3>
 
   <% @books.each do |book| %>
-  <div class="film-small">
-    <div class="film-top-small">
-      <h4 class="film-title-small text-center"><%= book.title %></h4>
-      <p class="film-date-small text-center">By <%= book.author %></p>
-      <% if user_signed_in? %>
-      <div class="film-actions-small">
-        <%= link_to 'Edit', edit_book_path(book), class: 'film-action-small' %>
-        <%= link_to 'Delete', book, method: :delete, data: { confirm: "Are you sure?" }, class: 'film-action-small' %>
+  <div data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom"
+     data-aos-duration="1000">
+    <div class="film-small">
+      <div class="film-top-small">
+        <h4 class="film-title-small text-center"><%= book.title %></h4>
+        <p class="film-date-small text-center">By <%= book.author %></p>
+        <% if user_signed_in? %>
+        <div class="film-actions-small">
+          <%= link_to 'Edit', edit_book_path(book), class: 'film-action-small' %>
+          <%= link_to 'Delete', book, method: :delete, data: { confirm: "Are you sure?" }, class: 'film-action-small' %>
+        </div>
+        <% end %>
       </div>
-      <% end %>
+      <%= cl_image_tag(book.photo, height: 320, width: 220, crop: :fill, class: 'film-photo-small') %>
+      <p class="film-description-small"><%= simple_format(book.description, class: 'text-justify') %></p>
     </div>
-    <%= cl_image_tag(book.photo, height: 320, width: 220, crop: :fill, class: 'film-photo-small') %>
-    <p class="film-description-small"><%= simple_format(book.description, class: 'text-justify') %></p>
   </div>
   <% end %>
 </div>

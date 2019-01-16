@@ -6,11 +6,15 @@
   <% end %>
   <h3 class="secondary-page-header text-center">Featured Articles</h3>
   <% @articles.each do |article| %>
-  <div class="article-index">
-    <p class="article-index-date">
-      <%= article.author %> / <%= article.created_at.strftime("%b %d, %Y") %>
-    </p>
-    <h4 class="article-index-title"><%= link_to article.title, article_path(article) %></h4>
+  <div data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom"
+     data-aos-duration="1000">
+    <div class="article-index">
+      <p class="article-index-date">
+        <%= article.author %> / <%= article.created_at.strftime("%b %d, %Y") %>
+      </p>
+      <h4 class="article-index-title"><%= link_to article.title, article_path(article) %></h4>
+    </div>
   </div>
   <% end %>
 </div>
@@ -21,11 +25,15 @@
   <% end %>
   <h3 class="secondary-page-header-small text-center">Featured Articles</h3>
   <% @articles.each do |article| %>
-  <div class="article-index">
-    <p class="article-index-date">
-      <%= article.author %> / <%= article.created_at.strftime("%b %d, %Y") %>
-    </p>
-    <h4 class="article-index-title"><%= link_to article.title, article_path(article) %></h4>
+  <div data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom"
+     data-aos-duration="1000">
+    <div class="article-index">
+      <p class="article-index-date">
+        <%= article.author %> / <%= article.created_at.strftime("%b %d, %Y") %>
+      </p>
+      <h4 class="article-index-title"><%= link_to article.title, article_path(article) %></h4>
+    </div>
   </div>
   <% end %>
 </div>
