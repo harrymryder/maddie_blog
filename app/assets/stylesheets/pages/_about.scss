@@ -1,15 +1,21 @@
-.about-top-photo {
-  clip-path: inset(20% 0 5% 0);
-  box-shadow: 0 3px 20px rgba(62, 9, 11, 0.3);
-  position: relative;
-  bottom: 48px;
-  -webkit-filter: grayscale(80%);
-  filter: grayscale(80%);
-  display: inline-block;
-  transition: all 0.3s ease;
-  border-radius: 3px;
-  &:hover {
-    -webkit-filter: none;
-    filter: none;
-  }
+.about-page-container-large {
+  max-width: 650px;
+  margin: 40px auto;
+  min-width: 350px;
+}
+
+.about-image-large {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+// SMALL SCREEN //
+
+.about-page-container-small {
+  min-width: 350px;
+  margin: 40px auto;
+  max-width: 350px;
 }
