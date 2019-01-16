@@ -1,5 +1,3 @@
 Text editor
 
 About page
-
-Edit 505 error pages
