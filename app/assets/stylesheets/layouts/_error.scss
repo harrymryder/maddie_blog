@@ -1,0 +1,17 @@
+.error-container {
+  margin: 100px auto;
+  min-width: 350px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.error-message {
+  color: $orange;
+  font-size: 24px;
+}
+.error-message-bottom {
+  font-style: italic;
+}
