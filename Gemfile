@@ -4,7 +4,7 @@ ruby '2.4.4'
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
-gem 'pg', '~> 0.21'
+# gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.1'
 gem 'redis'
@@ -20,7 +20,7 @@ gem 'webpacker'
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary', '~> 1.9.1'
 
-# gem 'dotenv-rails', groups: [:development, :test]
+gem "pg", :group => :production
 
 group :development do
   gem 'web-console', '>= 3.3.0'
