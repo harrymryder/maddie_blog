@@ -1,0 +1,76 @@
+// .contact-form-container {
+//   // background-color: #054A91;
+//   // background-color: #57737A;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin: 0 auto;
+// }
+
+// Form //
+
+
+
+.contact-me-form {
+  width: 350px;
+  outline: none;
+  margin-top: 80px;
+  .transparent-input {
+    background-color: transparent;
+    // color: #36413E;
+    color: $orange;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    padding: 16px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: lighter;
+    outline: none !important;
+    resize: none;
+    box-shadow: none;
+    font-family: $headers-font;
+  }
+  textarea {
+    height: 120px;
+    outline: none;
+  }
+  input:-webkit-autofill {
+    font-family: $headers-font;
+    -webkit-box-shadow: 0 0 0 100px #57737A inset;
+    -webkit-text-fill-color: #FEFBF6;
+  }
+  input[type=text]:focus {
+    outline: none;      /* Remove default outline and use border or box-shadow */
+    // box-shadow: 0 0 0 2px orange; /* Full freedom. (works also with border-radius) */
+    border-bottom: 1px solid $orange;
+  }
+  input[type=email]:focus {
+    outline: none;      /* Remove default outline and use border or box-shadow */
+    // box-shadow: 0 0 0 2px orange; /* Full freedom. (works also with border-radius) */
+    border-bottom: 1px solid $orange;
+  }
+  textarea[type=textarea]:focus {
+    outline: none;      /* Remove default outline and use border or box-shadow */
+    // box-shadow: 0 0 0 2px orange; /* Full freedom. (works also with border-radius) */
+    border-bottom: 1px solid $orange;
+  }
+  input::placeholder {
+    color: #36413E;
+  }
+  textarea::placeholder {
+    color: #36413E;
+  }
+}
+
+.submit-button {
+  border: 1px solid $orange;
+  color: $orange;
+  background-color: transparent;
+  font-family: $headers-font;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: $orange;
+    color: #FEFBF6;
+  }
+}

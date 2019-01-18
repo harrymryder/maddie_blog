@@ -4,13 +4,29 @@
   min-width: 350px;
 }
 
-.about-image-large {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+// .about-image-large {
+//   display: flex;
+//   justify-content: center;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+.about-content {
+  margin-top: 48px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
+.about-avatar {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  margin-top: 175px;
+}
+
+.about-text {
+  text-align: justify;
+  padding-left: 15px;
+}
 
 // SMALL SCREEN //
 
@@ -18,4 +34,23 @@
   min-width: 350px;
   margin: 40px auto;
   max-width: 350px;
+}
+
+.about-content-small {
+  margin-top: 48px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.about-text-small {
+  margin-top: 48px;
+  text-align: justify;
+}
+
+.about-avatar-small {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
