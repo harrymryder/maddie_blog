@@ -8,6 +8,7 @@
   // align-items: center;
   // justify-content: space-between;
   width: 100vw;
+  margin-bottom: 80px;
 }
 
 .navbar-content {
@@ -22,7 +23,7 @@
 /* Basic navbar item */
 .navbar-item {
   cursor: pointer;
-  padding: 0 20px;
+  padding: 0 10px;
   // padding-left: 48px;
 }
 
@@ -73,6 +74,10 @@
   &:hover {
     text-decoration: none !important;
   }
+}
+
+.small-navbar-logo {
+  padding: 0 10px;
 }
 
 .small-logo-top {
