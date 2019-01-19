@@ -1,0 +1,32 @@
+<div class="banner-content hidden-xs">
+  <h6><%= link_to 'About', about_path, class: "header-tabs"%></h6>
+  <h6><%= link_to 'Articles', articles_path, class: 'header-tabs'%></h6>
+  <%= link_to root_path, class: 'large-logo' do %>
+    <h3 class="large-logo-top">IF I HAD A</h3>
+    <h2 class="large-logo-bottom">COLUMN</h2>
+  <% end %>
+  <h6><%= link_to 'Books', books_path, class: 'header-tabs'%></h6>
+  <h6><%= link_to 'Film', films_path, class: 'header-tabs' %></h6>
+</div>
+
+<div class="navbar hidden-sm hidden-md hidden-lg">
+  <div class="navbar-content">
+    <div class="small-logo">
+      <%= link_to root_path, class: 'small-logo' do%>
+        <h3 class="small-logo-top">IF I HAD A</h3>
+        <h2 class="small-logo-bottom">COLUMN</h2>
+      <% end %>
+    </div>
+    <div class="navbar-item">
+      <div class="dropdown">
+        <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
+        <ul class="dropdown-menu dropdown-menu-right navbar-dropdown-menu">
+          <li><%= link_to 'About', about_path %></li>
+          <li><%= link_to 'Articles', articles_path %></li>
+          <li><%= link_to 'Books', books_path %></li>
+          <li><%= link_to 'Film', films_path  %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
