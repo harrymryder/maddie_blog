@@ -14,6 +14,8 @@
                     placeholder: "title",
                     autofocus: true %>
         <%= f.input :content,
+                    as: :trix_editor %>
+        <%= f.input :content,
                     required: true,
                     label: false,
                     placeholder: "content",
