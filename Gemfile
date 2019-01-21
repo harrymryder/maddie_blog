@@ -20,6 +20,8 @@ gem 'webpacker'
 gem 'carrierwave', '~> 1.2'
 gem 'cloudinary', '~> 1.9.1'
 
+gem 'trix'
+
 gem "pg", :group => :production
 
 group :development do
